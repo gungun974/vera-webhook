@@ -4,6 +4,10 @@ $config = [
 	'bureau' => [
 		'type' => 'light',
 		'id' => 40
+	],
+	'salon' => [
+		'type' => 'light',
+		'id' => 35
 	]
 ];
 
