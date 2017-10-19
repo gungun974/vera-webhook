@@ -58,7 +58,7 @@ if ($method === "POST") {
             break;
     	
     	default:
-		    $response->speech = "Bonjour je suis VERA!";
+		    $response->speech = $json->result->action;
     }
     echo json_encode($response);
 } else {
