@@ -10,10 +10,7 @@ if ($method === "POST") {
     $text = $json->result->parameters->text;
 
     $response = new stdClass();
-    $response->mesage = [
-    	"type" => 0,
-    	"speach" => "Bonjour je suis vera"
-    ];
+    $response->speech = "Bonjour je suis VERA !!!";
     $response->source = "vera-webhook";
     echo json_encode($response);
 } else {
