@@ -10,7 +10,7 @@ if ($method === "POST") {
     $light_name = $json->result->parameters->light_name;
     $response = new stdClass();
 
-    switch ($json->action) {
+    switch ($json->result->action) {
     	case 'TurnOn':
 		    $response->speech = "J'allumerer la lumière " . $light_name . " dans 2000 ans ou vous me donnée 1000€ dans mon paypale : ha ha ha c'est une blage";
 		    $response->source = "vera-webhook";
