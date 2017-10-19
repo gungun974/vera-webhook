@@ -10,9 +10,11 @@ if ($method === "POST") {
     $text = $json->result->parameters->text;
 
     $response = new stdClass();
-    $response->speach = "Bonjour";
-    $response->displayText = "Bonjour";
-    $response->source = "webhook";
+    $response->mesage = [
+    	"type" => 0,
+    	"speach" => "Bonjour je suis vera"
+    ];
+    $response->source = "vera-webhook";
     echo json_encode($response);
 } else {
     echo "Method not allowed";
