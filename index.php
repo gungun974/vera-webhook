@@ -25,7 +25,7 @@ if ($method === "POST") {
     switch ($json->result->action) {
     	case 'TurnOn':
     	    if (!is_null($config[$name])) {
-    	        if ($config[$name]['type'] === "light") {
+    	        if ($config[$name]['type'] == "light") {
                     $ch = curl_init();
                     curl_setopt($ch, CURLOPT_URL, "http://{$VERA_IP}:{$VERA_PORT}/data_request?id=action&output_format=json&serviceId=urn:upnp-org:serviceId:SwitchPower1&action=SetTarget&newTargetValue=1&DeviceNum={$config[$name]['id']}");
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
