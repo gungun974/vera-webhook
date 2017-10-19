@@ -58,7 +58,7 @@ if ($method === "POST") {
             break;
     	
     	default:
-		    $response->speech = $json->result->action;
+		    $response->speech = $json;
     }
     echo json_encode($response);
 } else {
