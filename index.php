@@ -1,9 +1,9 @@
 <?php
 
-$method = $_REQUEST['REQUEST_METHOD'];
+$method = $_SERVER['REQUEST_METHOD'];
 
 // Process only when method is POST
-if ($method == "POST") {
+if ($method === "POST") {
     $requestBody = file_get_contents('php://input');
     $json = json_decode($requestBody);
 
@@ -17,5 +17,3 @@ if ($method == "POST") {
 } else {
     echo "Method not allowed";
 }
-
-echo $method;
