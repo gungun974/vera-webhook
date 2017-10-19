@@ -2,7 +2,7 @@
 
 $config = [
 	'bureau' => [
-		'type' => 'ligtht',
+		'type' => 'light',
 		'id' => 40
 	]
 ];
@@ -35,7 +35,7 @@ if ($method === "POST") {
                 }
                     $response->speech = "Excuser moi mais " . $name . " n'est pas une lumière";
             } else {
-                $response->speech = "Excuser moi mais la lumière " . $name . "n'est pas valide";
+                $response->speech = "Excuser moi mais la lumière " . $name . " n'est pas valide";
             }
     		break;
     	
